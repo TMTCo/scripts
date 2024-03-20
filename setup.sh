@@ -31,6 +31,10 @@ sudo apt install apache2 -y
 echo "Installing Squid Proxy..."
 sudo apt install squid -y
 
+# Install Pi-hole
+echo "Installing Pi-hole..."
+sudo apt install pihole -y
+
 # Install Docker
 echo "Installing Docker..."
 sudo apt install docker.io -y
