@@ -33,7 +33,9 @@ sudo apt install squid -y
 
 # Install Pi-hole
 echo "Installing Pi-hole..."
-sudo apt install pihole -y
+git clone --depth 1 https://github.com/pi-hole/pi-hole.git Pi-hole
+cd "Pi-hole/automated install/"
+sudo bash basic-install.sh
 
 # Install Docker
 echo "Installing Docker..."
