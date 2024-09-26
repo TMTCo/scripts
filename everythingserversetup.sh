@@ -23,10 +23,9 @@ sudo apt install webmin -y
 echo "Installing Samba..."
 sudo apt install samba -y
 
-# Mount /var/sdb1 (NTFS) to /media
-echo "Mounting /var/sdb1 to /media..."
-sudo mkdir -p /media
-sudo mount /dev/sdb1 /media
+# Making folder Media
+echo "creating /media... Please wait"
+mkdir /media
 
 # Install Docker
 echo "Installing Docker..."
