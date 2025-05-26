@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TMTCo Scripts</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg" />
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1 class="logo">TMTCo Scripts</h1>
+      <div class="header-right">
+        <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+        <a class="github-link" href="https://github.com/TMTCo/scripts" target="_blank">View on GitHub</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="container">
+      <h2>Available Scripts</h2>
+      <p>Browse all public scripts in the repository below:</p>
+
+      <ul id="script-list" class="script-list">
+        <li>Loading scripts...</li>
+      </ul>
+
+      <!-- Quick Install Scripts Section -->
+      <section id="quick-scripts" class="quick-scripts">
+        <h2>Quick Install Scripts</h2>
+        <!-- Ubuntu Install -->
+        <div class="install-block">
+          <h3>Ubuntu Installer</h3>
+          <div class="code-container">
+            <pre><code id="install-ubuntu">curl -ssl https://raw.githubusercontent.com/TMTCo/scripts/main/tmtco-ubuntu-install.sh | sudo bash</code></pre>
+            <button class="copy-btn" data-target="install-ubuntu">Copy</button>
+          </div>
+        </div>
+        <!-- Everything Server Setup -->
+        <div class="install-block">
+          <h3>Everything Server Setup</h3>
+          <div class="code-container">
+            <pre><code id="install-server1">curl -ssl https://raw.githubusercontent.com/TMTCo/scripts/main/everythingserversetup.sh | sudo bash</code></pre>
+            <button class="copy-btn" data-target="install-server1">Copy</button>
+          </div>
+        </div>
+        <!-- Everything Server Setup 2 -->
+        <div class="install-block">
+          <h3>Everything Server Setup 2</h3>
+          <div class="code-container">
+            <pre><code id="install-server2">curl -ssl https://raw.githubusercontent.com/TMTCo/scripts/main/everythingserversetup-2.sh | sudo bash</code></pre>
+            <button class="copy-btn" data-target="install-server2">Copy</button>
+          </div>
+        </div>
+      </section>
+
+      <div class="cta">
+        <a href="https://github.com/TMTCo/scripts" class="button" target="_blank">Explore Repository</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Made with ❤️ by TMTCo • <a href="https://github.com/TMTCo/scripts">GitHub</a></p>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+  <script>
+    // Copy to clipboard functionality
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.copy-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const targetId = btn.getAttribute('data-target');
+          const text = document.getElementById(targetId).textContent;
+          navigator.clipboard.writeText(text).then(() => {
+            const original = btn.textContent;
+            btn.textContent = 'Copied!';
+            setTimeout(() => btn.textContent = original, 2000);
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>

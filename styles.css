@@ -1,0 +1,57 @@
+/* Script list */
+.script-list {
+  margin-top: 1.5rem;
+  list-style: none;
+  padding: 0;
+}
+
+.script-list li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.script-list li a {
+  color: #2563eb;
+  font-weight: 500;
+}
+
+/* Header right section */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Dark mode */
+body.dark {
+  background-color: #1f2937;
+  color: #f9fafb;
+}
+
+body.dark .header {
+  background-color: #111827;
+}
+
+body.dark .feature-card,
+body.dark .script-list li {
+  background-color: #374151;
+  border-color: #4b5563;
+}
+
+body.dark .footer {
+  background-color: #111827;
+  color: #d1d5db;
+}
+
+body.dark a {
+  color: #93c5fd;
+}
+
+/* Dark mode toggle button */
+#theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: inherit;
+}
