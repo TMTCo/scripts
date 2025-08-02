@@ -1,3 +1,11 @@
+New Release Notes:
+There is now a optional script for automanically installing the unifi os console software on your latest ubuntu server/debian server machines
+if you of course are running unifi in your house or business
+
+
+
+
+
 This script was recently updated
 (update date/time April 06 2025 at 2:50 PM (AEST))
 The scripts that I have made above can be used to setup three linux servers whether they are on a rasberry pi or on old laptops/desktops the script will work for everything just as long as you have ubuntu server 22.04 and above
