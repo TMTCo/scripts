@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+  unifi-controller:
+    image: jacobalberty/unifi:v9.4.17
+    container_name: unifi-controller
+    restart: unless-stopped
+    network_mode: host
+    environment:
+      - TZ=Etc/UTC  # Change this to your timezone, e.g. Australia/Sydney
+    volumes:
+      - ./unifi-data:/unifi
